@@ -61,7 +61,7 @@ implementation {
     method {
         my $msg = shift;
         return unless id;
-        (async)->add(POST (server).'send', [ id => id, msg => $msg ]);
+        (async)->add(POST (server).'/send', [ id => id, msg => $msg ]);
     }
 
     # type
